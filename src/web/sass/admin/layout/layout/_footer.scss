@@ -1,156 +1,88 @@
-/***
-Page footer
-***/
+/* Pre-footer */
+.page-prefooter {
+    padding: 30px 0;
+    clear: both;
 
-.page-footer {
-    padding: 8px 20px 5px 20px; 
-    font-size: 12px;
-    height: $page-footer-height;
-
-    @include clearfix();
-
-    .page-footer-inner {
-        float: left;
-        display: inline-block;
+    h2 {
+        font-weight: 700;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0 0 12px;
     }
 
-    .page-footer-fixed.page-footer-fixed-mobile & {
-        position: fixed;
-        left: 0;
-        right: 0;
-        z-index: $zindex-footer-fixed;
-        bottom: 0;
+    .subscribe-form {
+        padding-top: 5px;
+
+        .form-control {
+            font-size: 12px;
+            padding: 0 14px;
+            height: 36px;
+        }
+
+        .btn {
+            height: 34px;
+            text-transform: uppercase;
+            padding: 7px 16px;
+        }
+    }
+    
+    .social-icons {
+        padding-top: 9px;
+
+        li {
+            @include opacity(0.35);
+
+            &:hover {
+                @include opacity(1);
+            }
+        }
     }
 
-    .page-footer-fixed.page-footer-fixed-mobile.page-sidebar-fixed & {
-        margin-left: 0 !important;
+    p,
+    address {
+        margin: 0;
     }
 }
 
-@media (min-width: $screen-md-min) {  /* 992px */
-
-    /* Default footer */
-    .page-footer {
-        clear: left;
-    }
-
-    /* Fixed footer */
-    .page-footer-fixed {
-        .page-footer {
-          position: fixed;
-          left: 0;
-          right: 0;
-          z-index: $zindex-footer-fixed;
-          bottom: 0;
-        }
-    }
-
-    /* Footer with footer sidebar */
-    .page-sidebar-fixed {
-        &.page-sidebar-closed {
-            .page-footer {
-                margin-left: $sidebar-collapsed-width;
-            }
-        }
-
-        &.page-footer-fixed {
-            .page-footer {
-                margin-left: 0 !important;
-            }
-        }
-    }
-
-    /* Fixed Sidebar */
-    .page-sidebar-fixed {
-        .page-footer {
-            margin-left: $sidebar-width;
-            padding: 8px 20px 5px 20px;
-        }
-    }
-
-    /* Boxed page */
-    .page-boxed {
-        .page-footer {
-            padding: 8px 0 5px 0; 
-        }
-
-        &.page-sidebar-fixed .page-footer {
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-    }
-
-    /* Page sidebar reversed */
-    .page-sidebar-reversed.page-sidebar-fixed {
-        .page-footer {
-            margin-left: 0;
-            margin-right: $sidebar-width;
-            padding: 8px 20px 5px 20px; 
-        }
-
-        &.page-footer-fixed {
-            .page-footer {
-                margin-left: 0;
-                margin-right: 0; 
-            }
-        }
-
-        &.page-sidebar-closed {
-            .page-footer {
-                margin-right: $sidebar-collapsed-width;
-            }
-        }
-    }
+/* Footer */
+.page-footer {
+    font-size: 12px;
+    font-weight: 300;
+    padding: 17px 0;
 }
 
 @media (max-width: $screen-sm-max) { /* 991px */
+    .page-prefooter {
+        padding-bottom: 10px;
 
-    /* Boxed Layout */    
-    .page-boxed {
-        .page-footer {
-            padding-left: 0px;
-            padding-right: 0px;
+        .footer-block {
+            margin-bottom: 20px;
         }
+
+        @include reset-container();
+    }
+
+    .page-footer {
+        @include reset-container();
     }
 }
 
-@media (max-width: $screen-xs-max) { /* 767px */
-
-    /* Default footer & boxed footer */
-    .page-footer,
-    .page-boxed .page-footer {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    /* Fixed footer */
-    .page-footer-fixed {
-        .page-footer {
-            .container {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
-    }
-}
-
-/* Scroll Top Top */
+/* Scroll Top */
 
 .scroll-to-top {
-    display: inline-block;
-    padding: 1px; 
+    padding:2px; 
     text-align:center; 
     position:fixed;
-    bottom: 10px;    
-    z-index: $zindex-go-to-top;
+    z-index: $zindex-go-to-top; 
+    bottom: 5px;
     display:none;
-    right: 10px;
+    right: 20px;
 
     > i {
         display: inline-block;
-        color: darken(#94A0B2, 15%);
-        font-size: 30px;
-        @include opacity(0.6);
+        font-size: 32px;
+        @include opacity(0.7);
     }
 
     &:hover {
@@ -162,15 +94,8 @@ Page footer
     }
 }
 
-@media (min-width: $screen-md-min) { /* 992px */ 
-    .scroll-to-top {
-        right: 20px;
-    }
-}
-
 @media (max-width: $screen-sm-max) { /* 991px */
     .scroll-to-top {
-        bottom: 10px;  
         right: 10px;   
 
         > i {
