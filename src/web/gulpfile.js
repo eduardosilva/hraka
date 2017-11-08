@@ -26,11 +26,11 @@ var gulp = require('gulp'),
 	};
 
 // Task 'sass-layout-dev' - Run with command 'gulp sassdev'
-// gulp.task(sassConfig.layout.task, function() {
-//   return gulp.src(sassConfig.layout.source)
-//     .pipe(sass({outputStyle: 'expanded'}))
-//     .pipe(gulp.dest(sassConfig.layout.dest));
-// });
+gulp.task(sassConfig.layout.task, function() {
+  return gulp.src(sassConfig.layout.source)
+    .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(gulp.dest(sassConfig.layout.dest));
+});
 
 // Task 'sass-components-dev' - Run with command 'gulp sassdev'
 gulp.task(sassConfig.components.task, function() {
@@ -60,4 +60,4 @@ gulp.task('watch', function() {
 });
 
 // gulp.task('default', [sassConfig.layout.task, sassConfig.components.task, sassConfig.pages.task, 'browser-sync', 'watch']);
-gulp.task('default', [sassConfig.components.task, sassConfig.pages.task, 'watch']);
+gulp.task('default', [sassConfig.layout.task, sassConfig.components.task, sassConfig.pages.task, 'watch']);
