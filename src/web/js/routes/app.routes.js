@@ -127,12 +127,10 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                             files: [
                                 '../../../assets/global/plugins/bootstrap-datepicker/css/datepicker3.css',
                                 '../../../assets/global/plugins/select2/select2.css',
-                                '../../../assets/admin/pages/css/todo.css',
+                                '../../../assets/pages/css/customers.edit.css',
                                 
                                 '../../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js',
                                 '../../../assets/global/plugins/select2/select2.min.js',
-    
-                                '../../../assets/admin/pages/scripts/todo.js',
     
                                 'pages/customers/edit.controller.js',
                                 'pages/customers/service.js'  
