@@ -1,1 +1,5 @@
 node_modules/
+src/web/assets/admin/layout/css/
+src/web/assets/assets/global/css
+src/web/assets/pages/css
+src/web/assets/admin/pages/css
