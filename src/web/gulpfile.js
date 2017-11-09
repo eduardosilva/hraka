@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
-	// browserSync = require('browser-sync').create(),
+	browserSync = require('browser-sync').create(),
+	reload      = browserSync.reload,
 	
 	sassConfig = {
 		layout: {
@@ -46,18 +47,33 @@ gulp.task(sassConfig.pages.task, function() {
     .pipe(gulp.dest(sassConfig.pages.dest));
 });
 
-// gulp.task('browser-sync', function() {
-//     browserSync.init({
-//         server: {
-//             baseDir: "./"
-//         }
-//     });
-// });
-
-//watch
-gulp.task('watch', function() {
-  //gulp.watch(sassConfig.layoutSource, ['sass-layout-dev']);
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
 });
 
-// gulp.task('default', [sassConfig.layout.task, sassConfig.components.task, sassConfig.pages.task, 'browser-sync', 'watch']);
-gulp.task('default', [sassConfig.layout.task, sassConfig.components.task, sassConfig.pages.task, 'watch']);
+
+gulp.task('browser-sync-reload', function() {
+  reload();
+});
+
+//watch-layout
+gulp.task('watch-layout', function() {
+  gulp.watch(sassConfig.layout.source, [sassConfig.layout.task, 'browser-sync-reload']);
+});
+
+//watch-pages
+gulp.task('watch-pages', function() {
+  gulp.watch(sassConfig.pages.source, [sassConfig.pages.task, 'browser-sync-reload']);
+});
+
+gulp.task('default', [sassConfig.layout.task, 
+											sassConfig.components.task, 
+											sassConfig.pages.task, 
+											'browser-sync',
+											'watch-layout',
+											'watch-pages',
+										]);
