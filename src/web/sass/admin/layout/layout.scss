@@ -13,14 +13,14 @@
 	}
 } 
 
-@import 'layout/_print'; // print layout  
+@import '_print'; // print layout  
 
 @import 'themes/default.scss';
-@import 'layout/_header'; // page header
-@import 'layout/_content'; // page consnde          
-@import 'layout/_footer';   // page footer               
+@import '_header'; // page header
+@import '_content'; // page consnde          
+@import '_footer';   // page footer               
  
-@import 'layout/_theme-panel';  // theme customizer panel         
+@import '_theme-panel';  // theme customizer panel         
 
 /***  
 Page Loading      
