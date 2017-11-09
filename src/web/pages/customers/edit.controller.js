@@ -5,7 +5,6 @@
         var viewModel = this,
             active = function (){
                 customerService.get().then(function(data){
-                    debugger;
                     viewModel.name = data.name;
                 });
             };

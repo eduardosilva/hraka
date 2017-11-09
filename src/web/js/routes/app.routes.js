@@ -115,7 +115,7 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
             //Customer
             .state('customers', {
                 url: "/customers",
-                templateUrl: "pages/customers/edit.html",
+                templateUrl: "pages/customers/main.html",
                 data: { pageTitle: 'Clientes', pageSubTitle: 'cadastros de clientes' },
                 controller: "customerEditController",
                 controllerAs: 'viewModel',
@@ -138,6 +138,11 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                         });
                     }]
                 }
+            })       
+            .state("customers.edit", {
+                url: "/edit",
+                templateUrl: "pages/customers/basicInformation.html",
+                data: { pageTitle: 'Clientes', pageSubTitle: 'Informações detalhada do cliente' }
             })
     
 }]);
