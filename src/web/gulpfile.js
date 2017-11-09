@@ -52,11 +52,12 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: "./"
         }
-    });
+		});
 });
 
 
 gulp.task('browser-sync-reload', function() {
+  console.log('reloading...');
   reload();
 });
 
@@ -67,7 +68,11 @@ gulp.task('watch-layout', function() {
 
 //watch-pages
 gulp.task('watch-pages', function() {
-  gulp.watch(sassConfig.pages.source, [sassConfig.pages.task, 'browser-sync-reload']);
+	gulp.watch(sassConfig.pages.source, [sassConfig.pages.task, 'browser-sync-reload']);
+});
+
+gulp.task('watch-pages-html', function() {
+	gulp.watch('./pages/**/*.html', ['browser-sync-reload']);
 });
 
 gulp.task('default', [sassConfig.layout.task, 
@@ -76,4 +81,5 @@ gulp.task('default', [sassConfig.layout.task,
 											'browser-sync',
 											'watch-layout',
 											'watch-pages',
+											'watch-pages-html',
 										]);
