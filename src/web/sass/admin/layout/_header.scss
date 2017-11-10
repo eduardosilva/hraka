@@ -1,3 +1,5 @@
+@import '../../global/plugins/bootstrap/stylesheets/_bootstrap'; // global metronic framework variables
+
 /***
 Page Header
 ***/
@@ -60,7 +62,8 @@ Page Header
             padding: 0;
             float: right; 
 
-            .navbar-nav {
+            .notifications {
+                @extend .nav, .navbar-nav, .pull-right;
                 padding: 0;
                 margin-right: 0;
                 display: block; 
@@ -782,7 +785,7 @@ Page Header
 
             /* Top Menu */
             .top-menu {
-                .navbar-nav {
+                .notifications{
                     display: inline-block;
                     margin: 0 10px 0 0;
 
@@ -994,8 +997,8 @@ Page Header
             .top-menu {
                 display: block;
                 @include clearfix();
-               
-                .navbar-nav {   
+
+                .notifications {   
                     margin-right: 0px;
 
                     > li.dropdown {
