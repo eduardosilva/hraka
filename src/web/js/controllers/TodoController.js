@@ -1,6 +1,6 @@
 'use strict';
 
-MetronicApp.controller('TodoController', function($rootScope, $scope, $http, $timeout) {
+App.controller('TodoController', function($rootScope, $scope, $http, $timeout) {
     $scope.$on('$viewContentLoaded', function() {   
         Metronic.initAjax(); // initialize core components        
     });

@@ -1,5 +1,5 @@
 /* Setup Rounting For All Pages */
-MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider) {
+App.config(['$stateProvider', function($stateProvider, $urlRouterProvider) {
     
     $stateProvider
 
@@ -12,7 +12,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                 resolve: {
                     deps: ['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load([{
-                            name: 'MetronicApp',
+                            name: 'App',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
                                 '../../../assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css',
@@ -50,7 +50,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                 resolve: {
                     deps: ['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load([{
-                            name: 'MetronicApp',
+                            name: 'App',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
                                 '../../../assets/global/plugins/clockface/css/clockface.css',
@@ -86,7 +86,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                 resolve: {
                     deps: ['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load([{
-                            name: 'MetronicApp',
+                            name: 'App',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
                                 '../../../assets/global/plugins/bootstrap-select/bootstrap-select.min.css',
@@ -115,7 +115,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                 resolve: {
                     deps: ['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load([{
-                            name: 'MetronicApp',
+                            name: 'App',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
                                 '../../../assets/global/plugins/jstree/dist/themes/default/style.min.css',
@@ -138,7 +138,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                 resolve: {
                     deps: ['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load({
-                            name: 'MetronicApp',
+                            name: 'App',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
                                 '../../../assets/global/plugins/select2/select2.css',                             
@@ -166,7 +166,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                 resolve: {
                     deps: ['$ocLazyLoad', function($ocLazyLoad) {
                         return $ocLazyLoad.load({
-                            name: 'MetronicApp',
+                            name: 'App',
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: [
                                 '../../../assets/global/plugins/select2/select2.css',                             

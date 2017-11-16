@@ -19,5 +19,5 @@
         };
     };
 
-    MetronicApp.factory('customerService', service);
+    App.factory('customerService', service);
 })();

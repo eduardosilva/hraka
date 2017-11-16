@@ -1,5 +1,5 @@
 /* Setup Rounting For All Pages */
-MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider) {
+App.config(['$stateProvider', function($stateProvider, $urlRouterProvider) {
     
     $stateProvider
                 // UI Bootstrap
@@ -11,7 +11,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                     resolve: {
                         deps: ['$ocLazyLoad', function($ocLazyLoad) {
                             return $ocLazyLoad.load([{
-                                name: 'MetronicApp',
+                                name: 'App',
                                 files: [
                                     'js/controllers/GeneralPageController.js'
                                 ] 
@@ -34,7 +34,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                                 '../../../assets/global/plugins/angularjs/plugins/angular-file-upload/angular-file-upload.min.js',
                             ] 
                         }, {
-                            name: 'MetronicApp',
+                            name: 'App',
                             files: [
                                 'js/controllers/GeneralPageController.js'
                             ]
@@ -59,7 +59,7 @@ MetronicApp.config(['$stateProvider', function($stateProvider, $urlRouterProvide
                                 '../../../assets/global/plugins/angularjs/plugins/ui-select/select.min.js'
                             ] 
                         }, {
-                            name: 'MetronicApp',
+                            name: 'App',
                             files: [
                                 'js/controllers/UISelectController.js'
                             ] 

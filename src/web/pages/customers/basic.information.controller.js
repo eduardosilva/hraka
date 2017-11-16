@@ -17,6 +17,6 @@
         });
     };
 
-    MetronicApp.controller('customerEditBasicInformationController', controller);
+    App.controller('customerEditBasicInformationController', controller);
 
 })();
