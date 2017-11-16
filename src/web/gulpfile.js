@@ -16,12 +16,12 @@ var gulp = require('gulp'),
 		},
 		pages: {
 			task: 'sass-pages',
-			source: './sass/pages/**/*.scss',
+			source: './pages/**/*.scss',
 			dest: './assets/pages/css'
 		},
 		old_pages: {
 			task: 'sass-pages',
-			source: './sass/admin/pages/**/*.scss',
+			source: './pages/admin/pages/**/*.scss',
 			dest: './assets/admin/pages/css'
 		}
 	};
