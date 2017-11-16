@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var customerEditController = function ($scope, customerService) {
+    var controller = function ($scope, customerService) {
         var viewModel = this,
             active = function (){
                 customerService.get().then(function(data){
@@ -17,7 +17,6 @@
         });
     };
 
-    MetronicApp.controller('customerEditController', customerEditController);
+    MetronicApp.controller('customerEditBasicInformationController', controller);
 
 })();
-

@@ -132,8 +132,8 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
                                 '../../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js',
                                 '../../../assets/global/plugins/select2/select2.min.js',
     
-                                'pages/customers/edit.controller.js',
-                                'pages/customers/service.js'  
+                                'pages/customers/main.controller.js',
+                                'pages/customers/service.js'
                             ]                    
                         });
                     }]
@@ -141,8 +141,23 @@ MetronicApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvi
             })       
             .state("customers.edit", {
                 url: "/edit",
-                templateUrl: "pages/customers/basicInformation.html",
-                data: { pageTitle: 'Clientes', pageSubTitle: 'Informações detalhada do cliente' }
+                templateUrl: "pages/customers/basic.Information.html",
+                controller: "customerEditBasicInformationController",
+                controllerAs: 'viewModel',
+                data: { pageTitle: 'Clientes', pageSubTitle: 'Informações detalhada do cliente' },
+                resolve: {
+                    deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load({ 
+                            name: 'MetronicApp',  
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: 
+                            [
+                                'pages/customers/basic.information.controller.js',
+                                'pages/customers/service.js'
+                            ]                    
+                        });
+                    }]
+                }
             })
     
 }]);
