@@ -131,7 +131,8 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                                 
                                 '../../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js',
                                 '../../../assets/global/plugins/select2/select2.min.js',
-    
+
+                                'directives/sidebar/sidebar.js',
                                 'pages/customers/main.controller.js',
                                 'pages/customers/service.js'
                             ]                    

@@ -13,40 +13,22 @@
 <!-- BEGIN PAGE CONTENT-->
 <div class="row">
 	<div class="col-md-12">
-		<!-- BEGIN PROFILE SIDEBAR -->
-		<div class="sidebar">
-			<!-- PORTLET MAIN -->
-			<div class="portlet light portlet">
-				<!-- SIDEBAR MENU -->
-				<div class="sidebar-menu">
-					<ul>
-						<li ng-class="{active: $state.includes('customers.edit')}">
-							<a ui-sref="profile.dashboard">
-								<i class="icon-home"></i>
-								Informações Básicas </a>
-						</li>
-						<li ng-class="{active: $state.includes('profile.account')}">
-							<a ui-sref="profile.account">
-								<i class="icon-settings"></i>
-								Orçamentos </a>
-						</li>
-						<li>
-							<a href="#/todo">
-								<i class="icon-check"></i>
-								Tasks </a>
-						</li>
-						<li ng-class="{active: $state.includes('profile.help')}">
-							<a ui-sref="profile.help">
-								<i class="icon-info"></i>
-								Help </a>
-						</li>
-					</ul>
-				</div>
-				<!-- END MENU -->
-			</div>
-			<!-- END PORTLET MAIN -->
-		</div>
-		<!-- END BEGIN PROFILE SIDEBAR -->
+		
+	</div>
+	<div class="col-md-12">
+		<!-- BEGIN SIDEBAR -->
+		<sidebar items="[{
+            name: 'Informações Básicas',
+            icon: 'icon-home',
+            url: 'customers.edit'
+        },
+        {
+            name: 'Orçamento',
+            icon: 'icon-settings',
+            url: 'customers.budget'
+        }]"></sidebar>
+
+		<!-- END SIDEBAR -->
 		<!-- BEGIN PROFILE CONTENT -->
 		<div ui-view class="customer-content fade-in-up">
 		</div>

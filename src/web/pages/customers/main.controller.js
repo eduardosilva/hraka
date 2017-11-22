@@ -1,13 +1,14 @@
 (function () {
     'use strict';
 
-    var controller = function ($scope) {
+    var controller = function ($scope, $state) {
         var viewModel = this,
             active = function (){
 
             };
 
         active();
+
 
         $scope.$on('$viewContentLoaded', function () {
             // initialize core components

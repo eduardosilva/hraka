@@ -1,0 +1,16 @@
+<div class="sidebar">
+    <!-- PORTLET MAIN -->
+    <div class="portlet light portlet">
+        <!-- SIDEBAR MENU -->
+        <div class="sidebar-menu">
+            <ul ng-repeat="item in items">
+                <li ng-class="{active: isActive(item.url)}">
+                    <a ui-sref="item.url">
+                        <i ng-class="item.icon"></i>{{item.name}} </a>
+                </li>
+            </ul>
+        </div>
+        <!-- END MENU -->
+    </div>
+    <!-- END PORTLET MAIN -->
+</div>
