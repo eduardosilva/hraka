@@ -22,6 +22,10 @@
 @import '_content'; // page consnde          
 @import '_footer';   // page footer         
 
+//Pages
+@import '../../../pages/customers/_customers.edit';
+
+//Directives
 @import '../../../directives/sidebar/_sidebar';
  
 @import '_theme-panel';  // theme customizer panel         

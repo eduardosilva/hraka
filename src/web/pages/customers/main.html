@@ -11,13 +11,9 @@
 <!-- END PAGE BREADCRUMB -->
 
 <!-- BEGIN PAGE CONTENT-->
-<div class="row">
-	<div class="col-md-12">
-		
-	</div>
-	<div class="col-md-12">
-		<!-- BEGIN SIDEBAR -->
-		<sidebar items="[{
+<div class="customer-page">
+	<!-- BEGIN SIDEBAR -->
+	<sidebar items="[{
             name: 'Informações Básicas',
             icon: 'icon-home',
             url: 'customers.edit'
@@ -28,11 +24,9 @@
             url: 'customers.budget'
         }]"></sidebar>
 
-		<!-- END SIDEBAR -->
-		<!-- BEGIN PROFILE CONTENT -->
-		<div ui-view class="customer-content fade-in-up">
-		</div>
-		<!-- END PROFILE CONTENT -->
-	</div>
+	<!-- END SIDEBAR -->
+	<!-- BEGIN PROFILE CONTENT -->
+	<div ui-view class="customer-content fade-in-up"></div>
+	<!-- END PROFILE CONTENT -->
 </div>
 <!-- END PAGE CONTENT-->

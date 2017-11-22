@@ -1,0 +1,18 @@
+@import '../../sass/global/_variables'; // global variables.
+
+/***
+Customer Edit Page
+***/
+
+.customer-page{
+  @extend .row;
+
+  sidebar{
+    @extend .col-md-3;
+  }
+
+  &-content{
+    @extend .col-md-9;
+    // overflow: hidden;
+  }
+}
