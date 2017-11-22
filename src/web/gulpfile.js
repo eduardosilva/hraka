@@ -63,7 +63,7 @@ gulp.task('browser-sync-reload', function() {
 
 //watch-layout
 gulp.task('watch-layout', function() {
-  gulp.watch(sassConfig.layout.source, [sassConfig.layout.task, 'browser-sync-reload']);
+  gulp.watch('./sass/**/*.scss', [sassConfig.layout.task, 'browser-sync-reload']);
 });
 
 //watch-pages

@@ -1,5 +1,7 @@
 //## Main Layout CSS Builder
 
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all");
+
 @import '../../global/_variables'; // global metronic framework variables
 @import '../../global/components/_mixins'; // global metronic framework mixings
 
@@ -18,7 +20,9 @@
 @import 'themes/default.scss';
 @import '_header'; // page header
 @import '_content'; // page consnde          
-@import '_footer';   // page footer               
+@import '_footer';   // page footer         
+
+@import 'components/_sidebar';
  
 @import '_theme-panel';  // theme customizer panel         
 

@@ -184,3 +184,12 @@ $screen-md-max:              		($screen-lg-min - 1) !default;
 //## Img path settings
 
 $general-img-path:                  '../img/'; 
+
+//## Sidebar menu
+$sidebar-menu-border-color:             #f0f4f7;
+$sidebar-menu-link-color:               #93a3b5;
+$sidebar-menu-link-active-color:        #5b9bd1;
+$sidebar-menu-link-active-bg-color:     #f6f9fb;
+$sidebar-menu-link-active-border-color: #5b9bd1;
+$sidebar-menu-link-hover-color:         #5b9bd1;
+$sidebar-menu-link-hover-bg-color:      #fafcfd;

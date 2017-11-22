@@ -1,0 +1,40 @@
+//Custom Sidebar
+.sidebar {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+
+    &-menu {
+        padding-bottom: 20px;
+
+        ul{
+          @extend .nav;
+        }
+
+        ul li {
+            border-bottom: 1px solid $sidebar-menu-border-color;
+            &:last-child {
+                border-bottom: none;
+            }
+            &.active a {
+                color: $sidebar-menu-link-active-color;
+                background-color: $sidebar-menu-link-active-bg-color;
+                border-left: 2px solid $sidebar-menu-link-active-border-color;
+                margin-left: -2px;
+            }
+            a {
+                color: $sidebar-menu-link-color;
+                font-size: 16px;
+                font-weight: 400;
+                &:hover {
+                    background-color: $sidebar-menu-link-hover-bg-color;
+                    color: $sidebar-menu-link-hover-color;
+                }
+            }
+            i {
+                margin-right: 8px;
+                font-size: 16px;
+            }
+        }
+    }
+}
