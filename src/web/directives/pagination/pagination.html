@@ -1,0 +1,17 @@
+<div class="app-pagination">
+        <div class="info">Mostrando de {{showingFrom}} até {{showingTo}} de {{totalItems}} registros</div>
+        <div class="detail">
+            <div class="btn-group">
+                <button ng-disabled="currentPage === 1" type="button" class="btn btn-default"><i class="fa fa-angle-double-left"></i></button>
+                <button ng-disabled="currentPage === 1" type="button" class="btn btn-default"><i class="fa fa-angle-left"></i></button>
+                <button ng-repeat-start="page in pages" 
+                        ng-repeat-end="" 
+                        ng-click="moveTo(page)"
+                        ng-class="{blue: page === currentPage}"
+                        type="button" 
+                        class="btn btn-default">{{page}}</button>
+                <button ng-disabled="currentPage === totalPages" type="button" class="btn btn-default"><i class="fa fa-angle-right"></i></button>
+                <button ng-disabled="currentPage === totalPages" type="button" class="btn btn-default"><i class="fa fa-angle-double-right"></i></button>
+            </div>
+        </div>
+</div>

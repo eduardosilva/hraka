@@ -23,10 +23,11 @@
 @import '_footer';   // page footer         
 
 //Pages
-@import '../../../pages/customers/_customers.edit';
+@import '../../../pages/customers/edit/_customers.edit';
 
 //Directives
 @import '../../../directives/sidebar/_sidebar';
+@import '../../../directives/pagination/_pagination';
  
 @import '_theme-panel';  // theme customizer panel         
 

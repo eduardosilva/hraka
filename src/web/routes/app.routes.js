@@ -111,11 +111,31 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     }]
                 }
             })
-
-            //Customer
+                        //Customer
             .state('customers', {
                 url: "/customers",
-                templateUrl: "pages/customers/main.html",
+                templateUrl: "pages/customers/list/list.html",
+                data: { pageTitle: 'Clientes', pageSubTitle: 'cadastros de clientes' },
+                controller: "customerListController",
+                controllerAs: 'viewModel',
+                resolve: {
+                    deps: ['$ocLazyLoad', function($ocLazyLoad) {
+                        return $ocLazyLoad.load({ 
+                            name: 'App',  
+                            insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
+                            files: [
+
+                                'directives/pagination/pagination.js',
+                                'pages/customers/list/list.controller.js',
+                                'pages/customers/service.js'
+                            ]                    
+                        });
+                    }]
+                }
+            })  
+            .state('customers.edit', {
+                url: "/customers",
+                templateUrl: "pages/customers/edit/main.html",
                 data: { pageTitle: 'Clientes', pageSubTitle: 'cadastros de clientes' },
                 controller: "customerEditController",
                 controllerAs: 'viewModel',
@@ -127,20 +147,19 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                             files: [
                                 '../../../assets/global/plugins/bootstrap-datepicker/css/datepicker3.css',
                                 '../../../assets/global/plugins/select2/select2.css',
-                                '../../../assets/pages/css/customers/customers.edit.css',
                                 
                                 '../../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js',
                                 '../../../assets/global/plugins/select2/select2.min.js',
 
                                 'directives/sidebar/sidebar.js',
-                                'pages/customers/main.controller.js',
+                                'pages/customers/edit/main.controller.js',
                                 'pages/customers/service.js'
                             ]                    
                         });
                     }]
                 }
             })       
-            .state("customers.edit", {
+            .state("customers.editBasicInformation", {
                 url: "/edit",
                 templateUrl: "pages/customers/basic.Information.html",
                 controller: "customerEditBasicInformationController",

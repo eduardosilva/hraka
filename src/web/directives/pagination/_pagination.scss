@@ -1,0 +1,15 @@
+.app-pagination{
+    @extend .clearfix;
+
+    .info{
+        @extend .pull-left;
+    }
+
+    .detail{
+        @extend .btn-toolbar, .pull-right;
+
+        .btn {
+            width: 40px;
+        }
+    }
+}

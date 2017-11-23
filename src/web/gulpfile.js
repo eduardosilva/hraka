@@ -57,11 +57,13 @@ gulp.task('watch-layout', function () {
 //watch-pages
 gulp.task('watch-pages', function () {
 	gulp.watch('./pages/**/*.html', ['browser-sync-reload']);
+	gulp.watch('./pages/**/*.js', ['browser-sync-reload']);
 	gulp.watch('./pages/**/*.scss', [sassConfig.layout.task, 'browser-sync-reload']);
 });
 
 gulp.task('watch-directives', function (){
 	gulp.watch('./directives/**/*.html', ['browser-sync-reload']);
+	gulp.watch('./directives/**/*.js', ['browser-sync-reload']);
 	gulp.watch('./directives/**/*.scss', [sassConfig.layout.task, 'browser-sync-reload']);
 });
 
