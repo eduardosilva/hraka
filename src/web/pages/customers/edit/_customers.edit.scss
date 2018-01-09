@@ -13,6 +13,26 @@ Customer Edit Page
 
   &-content{
     @extend .col-md-9;
-    // overflow: hidden;
+    overflow: hidden;
   }
 }
+
+.customer-content {
+  overflow: hidden;
+}
+
+// @media (max-width: $screen-sm-max) {
+//   /* 991px */
+//   /* 991px */
+//   .customer-sidebar {
+//     float: none;
+//     width: 100% !important;
+//     margin: 0;
+//   }
+//   .customer-sidebar>.portlet {
+//     margin-bottom: 20px;
+//   }
+//   .customer-content {
+//     overflow: visible;
+//   }
+// }

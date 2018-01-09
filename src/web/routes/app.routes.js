@@ -133,8 +133,8 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     }]
                 }
             })  
-            .state('customers.edit', {
-                url: "/customers",
+            .state('customer', {
+                url: "/customer",
                 templateUrl: "pages/customers/edit/main.html",
                 data: { pageTitle: 'Clientes', pageSubTitle: 'cadastros de clientes' },
                 controller: "customerEditController",
@@ -159,9 +159,9 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                     }]
                 }
             })       
-            .state("customers.editBasicInformation", {
-                url: "/edit",
-                templateUrl: "pages/customers/basic.Information.html",
+            .state("customer.editBasicInformation", {
+                url: "/edit/:id",
+                templateUrl: "pages/customers/edit/basic.Information.html",
                 controller: "customerEditBasicInformationController",
                 controllerAs: 'viewModel',
                 data: { pageTitle: 'Clientes', pageSubTitle: 'Informações detalhada do cliente' },
@@ -172,7 +172,7 @@ App.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
                             insertBefore: '#ng_load_plugins_before', // load the above css files before '#ng_load_plugins_before'
                             files: 
                             [
-                                'pages/customers/basic.information.controller.js',
+                                'pages/customers/edit/basic.information.controller.js',
                                 'pages/customers/service.js'
                             ]                    
                         });

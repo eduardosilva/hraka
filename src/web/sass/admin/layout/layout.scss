@@ -22,10 +22,14 @@
 @import '_content'; // page consnde          
 @import '_footer';   // page footer         
 
-//Pages
+/***  
+Pages
+***/   
 @import '../../../pages/customers/edit/_customers.edit';
 
-//Directives
+/***  
+Directives
+***/ 
 @import '../../../directives/sidebar/_sidebar';
 @import '../../../directives/pagination/_pagination';
  

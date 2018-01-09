@@ -1,11 +1,13 @@
 (function () {
     'use strict';
 
-    var controller = function ($scope, customerService) {
+    var controller = function ($scope, $state, customerService) {
+
         var viewModel = this,
             active = function (){
-                customerService.get().then(function(data){
+                customerService.get($state.params.id).then(function(data){
                     viewModel.name = data.name;
+                    console.log(data);
                 });
             };
 

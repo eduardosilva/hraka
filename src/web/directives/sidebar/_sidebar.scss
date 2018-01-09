@@ -1,21 +1,16 @@
+@import '../../global/_variables'; // global metronic framework variables
 //Custom Sidebar
 .sidebar {
     // float: left;
     // width: 300px;
     // margin-right: 20px;
-
     &-menu {
         padding-bottom: 20px;
-
-        ul{
-          @extend .nav;
+        ul {
+            @extend .nav;
         }
-
         ul li {
             border-bottom: 1px solid $sidebar-menu-border-color;
-            &:last-child {
-                border-bottom: none;
-            }
             &.active a {
                 color: $sidebar-menu-link-active-color;
                 background-color: $sidebar-menu-link-active-bg-color;
